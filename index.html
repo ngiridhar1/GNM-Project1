@@ -5,12 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>#TourDePark</title>
 
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!-- Moment.js -->
 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 <!-- Link Reset -->
 <link rel="stylesheet" type="text/css" href="reset.css">
-
 
 <!-- Bootstrap & CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -37,19 +39,19 @@
             </div>
             
            
-                    <div class="col-sm-7 buttonsRow">
-                        <button type="button" class="ParksBtn btn-lg">PARKS!</button>
-                        <button type="button" class="BikesBtn btn-lg">BIKES!</button>
-                        <button type="button" class="BeerBtn btn-lg">BEER!</button>
-                    </div>
+            <div class="col-sm-7 buttonsRow">
+                <button onclick="showLocation('parks')" type="button" class="ParksBtn btn-lg">PARKS!</button>
+                <button onclick="showLocation('bike share toronto')" type="button" class="BikesBtn btn-lg">BIKES!</button>
+                <button onclick="showLocation('beer store')" type="button" class="BeerBtn btn-lg">BEER!</button>
+            </div>
            
     </div>
 
     <!-- <div class="instructions-container"> -->
         <div class="row">
             <div class="col-sm-4 instructions">
-                <h2>What is TourDePark?</h2>
-                <p>Simple... it's a beer crawl. Have one (or a few) beer per park and enjoy Toronto's greenery. Oh, and we travel park to park by bycicle. For the day, we are a bike gang. Bike gang uniformas may one day be incorporated. For now, just wear what makes you comfortable. </p>
+                <h2>What is Tour De Park?</h2>
+                <p>Simple... it's a beer crawl. Have one (or a few) beer per park and enjoy Toronto's greenery. Oh, and we travel park to park by bicycle. For the day, we are a bike gang. Bike gang uniforms may one day be incorporated. For now, just wear what makes you comfortable. </p>
                 <br>
                 <p>Use this website to help you plan your TourDePark. We'll help connect you to the essentials</p>
             </div>
@@ -57,20 +59,20 @@
             <!-- <div class="map-container"> -->
                 <div class="col-sm-6 map">
                     <div id="googleMap" style="width:100%;height:400px;">
-                    
-                    <p>Map goes here!</p
-                        ></div>
+                    </div>
                 </div>
-            </div>
         </div>
+        
         <br>
 
 
+<footer class="footer">By: Nic, Giri and Maggie</footer>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnoDLLjOPRYNw5DAfBEBgrFEcvifr5N5E&v=quarterly&callback=initMap"
 
-    </div>
+async defer></script>
+<script src="script.js"></script>
 
-</div>
+
 
 </body>
-<footer class="footer">By: Nic, Giri and Maggie</footer>
 </html>
