@@ -1,77 +1,102 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>#TourDePark</title>
+<html lang="en">
 
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>#TourDePark</title>
 
-<!-- Moment.js -->
-<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Link Reset -->
-<link rel="stylesheet" type="text/css" href="reset.css">
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-<!-- Bootstrap & CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!-- Link CSS -->
-<link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Link Reset -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Notable|Open+Sans&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap & CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Link CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="images">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Notable|Open+Sans&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
+
     <div class="image-container">
         <div class="text">TOUR DE PARK</div>
     </div>
 
     <img src="https://www.blogto.com/upload/2016/05/20150523-590-BedIn2.jpg" alt="TorontoPark">
-    
-   
+
+
     <div class="row">
-            <div class="col-sm-3 weather">
-                <p>Weather goes here!</p>
+        <div class="col-sm-3 weather">
+            <div class="container">
+                <div class="app-title">
+                    <p>Weather</p>
+                </div>
+                <div class="notification"> </div>
+                <div class="weather-container">
+                    <div class="weather-icon">
+                        <img src="images/unknown.png" alt="">
+                    </div>
+                    <div class="temperature-value">
+                        <p>- °<span>C</span></p>
+                    </div>
+                    <div class="temperature-description">
+                        <p> - </p>
+                    </div>
+                    <div class="location">
+                        <p>-</p>
+                    </div>
+                </div>
             </div>
-            
-           
-            <div class="col-sm-7 buttonsRow">
-                <button onclick="showLocation('parks')" type="button" class="ParksBtn btn-lg">PARKS!</button>
-                <button onclick="showLocation('bike share toronto')" type="button" class="BikesBtn btn-lg">BIKES!</button>
-                <button onclick="showLocation('beer store')" type="button" class="BeerBtn btn-lg">BEER!</button>
-            </div>
-           
+            </p>
+        </div>
+
+
+        <div class="col-sm-7 buttonsRow">
+            <button onclick="showLocation('parks')" type="button" class="ParksBtn btn-lg">PARKS</button>
+            <button onclick="showLocation('bike share toronto')" type="button" class="BikesBtn btn-lg">BIKES</button>
+            <button onclick="showLocation('beer store')" type="button" class="BeerBtn btn-lg">BEER</button>
+        </div>
+
     </div>
 
     <!-- <div class="instructions-container"> -->
-        <div class="row">
-            <div class="col-sm-4 instructions">
-                <h2>What is Tour De Park?</h2>
-                <p>Simple... it's a beer crawl. Have one (or a few) beer per park and enjoy Toronto's greenery. Oh, and we travel park to park by bicycle. For the day, we are a bike gang. Bike gang uniforms may one day be incorporated. For now, just wear what makes you comfortable. </p>
-                <br>
-                <p>Use this website to help you plan your TourDePark. We'll help connect you to the essentials</p>
-            </div>
+    <div class="row">
+        <div class="col-sm-4 instructions">
+            <h2>What is Tour De Park?</h2>
+            <p>Simple... it's a beer crawl. Have one (or a few) beer per park and enjoy Toronto's greenery. Oh, and we travel park to park by bicycle. For the day, we are a bike gang. Bike gang uniforms may one day be incorporated. For now, just wear what
+                makes you comfortable. </p>
             <br>
-            <!-- <div class="map-container"> -->
-                <div class="col-sm-6 map">
-                    <div id="googleMap" style="width:100%;height:400px;">
-                    </div>
-                </div>
+            <p>Use this website to help you plan your TourDePark. We'll help connect you to the essentials</p>
         </div>
-        
         <br>
+        <!-- <div class="map-container"> -->
+        <div class="col-sm-6 map">
+            <div id="googleMap" style="width:100%;height:350px;">
+            </div>
+        </div>
+    </div>
+
+    <br>
 
 
-<footer class="footer">By: Nic, Giri and Maggie</footer>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="script.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnoDLLjOPRYNw5DAfBEBgrFEcvifr5N5E&v=quarterly&libraries=places&callback=initMap" async defer></script>
+    <footer class="footer">By: Nic, Giri and Maggie</footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnoDLLjOPRYNw5DAfBEBgrFEcvifr5N5E&v=quarterly&libraries=places&callback=initMap" async defer></script>
 
 
 
 </body>
+
 </html>
