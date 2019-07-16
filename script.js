@@ -46,26 +46,26 @@ var myLatlng;
 //     infoWindow.open(map);
 //   }
 
-function showLocation(locationInput){
-// if (locationInput === 'parks'){
+function showLocation(business, location={lat:43.650, lng:-79.391}){
 
-// }
-// if (locationInput === 'bike share toronto'){
-    
-// }
-// if (locationInput === 'beer store'){
-    
-// }
-$.getJSON( `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyAnoDLLjOPRYNw5DAfBEBgrFEcvifr5N5E&v&input=${locationInput}&inputtype=textquery`, function( data ) {
-    console.log(data);
-    
+
+// $.ajax({
+//     url:`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${business}&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${location.lat},${location.lng}&key=AIzaSyAnoDLLjOPRYNw5DAfBEBgrFEcvifr5N5E`,
+//     method: 'GET',
+//     headers: {
+//         'Access-Control-Allow-Origin': '*'
+//     },
+//     }).done( function( data ) {
+//     console.log(data);
+// });
+axios.get(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${business}&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:2000@${location.lat},${location.lng}&key=AIzaSyAnoDLLjOPRYNw5DAfBEBgrFEcvifr5N5E`).then(function(response){
+    console.log(response);
+}).catch(function(err){
+    console.log(err);
 })
 }
 
-// `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyAnoDLLjOPRYNw5DAfBEBgrFEcvifr5N5E&v&input=${locationInput}&inputtype=textquery`
 
-
-// }
 
 function initMap() {
     myLatlng = {lat: 43.650, lng: -79.391};
