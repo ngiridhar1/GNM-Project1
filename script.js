@@ -176,7 +176,7 @@ function showError(error) {
 
 // GET WEATHER FROM API PROVIDER
 function getWeather(latitude, longitude) {
-    var api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    var api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
 
     fetch(api)
         .then(function(response) {
