@@ -173,6 +173,11 @@ h2 {
 .weather-icon img {
     display: block;
     margin: 0 auto;
+    height: 80px;
+    width: 80px;
+    z-index: auto;
+    margin-left: 65px;
+    margin-top: 10px;
 }
 
 .temperature-value {
