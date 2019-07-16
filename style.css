@@ -54,37 +54,45 @@ img {
     text-align: center;
     color: black;
     opacity: 1;
-    margin-left: 15%;
+    margin-left: 5%;
+    /* margin-right: 5%; */
+    margin-top: 4%;
+    width: 750px;
+
 }
 
 .ParksBtn {
     background: rgb(99, 223, 99);
     color: white;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    width: 200px;
+    /* margin-left: 3%;
+    margin-right: 3%; */
+    /* margin-top: 20px;
+    margin-bottom: 15px; */
+    width: 250px;
+    height:100px;
 }
 
 .BikesBtn {
     background: rgb(27, 45, 143);
     color: white;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    width: 200px;
+    /* margin-left: 3%;
+    margin-right: 3%; */
+    /* margin-top: 20px;
+    margin-bottom: 15px; */
+    width: 250px;
+    height:100px;
+
 }
 
 .BeerBtn {
     background: rgb(235, 203, 63);
     color: white;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    width: 200px;
+    /* margin-left: 3%;
+    margin-right: 3%; */
+    /* margin-top: 20px;
+    margin-bottom: 15px; */
+    width: 250px;
+    height:100px;
 }
 
 .instructions {
@@ -103,10 +111,10 @@ h2 {
 .map {
     margin-left: 1.5%;
     margin-right: 3%;
-    margin-top: 1%;
+    /* margin-top: 1%; */
     margin-bottom: 1%;
-    border: 4px, black;
-    background: rgb(228, 238, 243, 0.8);
+    /* border: 4px, black; */
+    /* background: rgb(228, 238, 243, 0.8); */ 
     height: 60%;
     width: 60%;
 }
